@@ -1,0 +1,14 @@
+# This is a closed loop (no intersections) with a few obstacles directly
+# on the road, which have to be avoided.
+
+tiles:
+- [grass, grass,   grass,        grass,         grass,        grass,  grass]
+- [grass, grass,   grass,        asphalt,       asphalt,      water,  water]
+- [grass, asphalt, asphalt,      asphalt,       asphalt,      water,  water]
+- [grass, asphalt, curve_left/W, curve_left/N,  grass,        grass,  stucco]
+- [grass, water,   straight/S,   curve_right/W, curve_left/N, grass,  stucco]
+- [grass, water,   curve_left/S, straight/E,    curve_left/E, grass,  stucco]
+- [grass, water,   water,        grass,         grass,        grass,  stucco]
+- [grass, water,   water,        stucco,        stucco,       grass,  stucco]
+- [stucco, stucco, stucco,       stucco,        stucco,       stucco, stucco]
+tile_size: 0.585

@@ -7,12 +7,19 @@ from PIL import Image
 class ResizeWrapper(gym.ObservationWrapper):
     def __init__(self, env=None, shape=(64, 64, 3)):
         super(ResizeWrapper, self).__init__(env)
-        self.observation_space.shape = shape
+        """self.observation_space.shape = shape
         self.observation_space = spaces.Box(
             self.observation_space.low[0, 0, 0],
             self.observation_space.high[0, 0, 0],
             shape,
             dtype=self.observation_space.dtype,
+        )"""
+        # Create a new observation space with the desired shape
+        self.observation_space = spaces.Box(
+            low=0,
+            high=255,
+            shape=shape,
+            dtype=np.uint8
         )
         self.shape = shape
 
